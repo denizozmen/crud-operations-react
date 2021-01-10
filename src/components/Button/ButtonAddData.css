@@ -1,0 +1,11 @@
+.btn-openModal {
+  background: #4f5cd1;
+  color: #eee;
+  font-size: 1rem;
+  margin: 2rem;
+  padding: 0.5rem 1.8rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  float: right;
+}
