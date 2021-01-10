@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { FormContext } from "../../App";
 
 const EditUserForm = (props) => {
+  
   const [user, setUser] = useState(props.currentUser);
 
   useEffect(() => {
@@ -18,8 +20,8 @@ const EditUserForm = (props) => {
     <form
       onSubmit={(event) => {
         event.preventDefault();
-
         props.updateUser(user.id, user);
+        
       }}
     >
       <label>Name</label>

@@ -1,45 +1,53 @@
-import React from "react";
+import React, { useContext } from "react";
+import { FormContext } from "../../App";
 
-const UserTable = (props) => (
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Username</th>
-        <th>Actions</th>
-      </tr>
-    </thead>
-    <tbody>
-      {props.users.length > 0 ? (
-        props.users.map((user) => (
-          <tr key={user.id}>
-            <td>{user.name}</td>
-            <td>{user.username}</td>
-            <td>
-              <button
-                onClick={() => {
-                  props.editRow(user);
-                }}
-                className="button muted-button"
-              >
-                Edit
-              </button>
-              <button
-                onClick={() => props.deleteUser(user.id)}
-                className="button muted-button"
-              >
-                Delete
-              </button>
-            </td>
-          </tr>
-        ))
-      ) : (
+const TableData = () => {
+  const { editRow, users, deleteUser, setShow } = useContext(FormContext);
+
+  //   console.log(users);
+
+  return (
+    <table>
+      <thead>
         <tr>
-          <td colSpan={3}>No users</td>
+          <th>Name</th>
+          <th>Username</th>
+          <th>Actions</th>
         </tr>
-      )}
-    </tbody>
-  </table>
-);
+      </thead>
+      <tbody>
+        {users.length > 0 ? (
+          users.map((user) => (
+            <tr key={user.id}>
+              <td>{user.name}</td>
+              <td>{user.username}</td>
+              <td>
+                <button
+                  onClick={() => {
+                    editRow(user);
+                    setShow(true);
+                  }}
+                  className="button muted-button"
+                >
+                  Edit
+                </button>
+                <button
+                  onClick={() => deleteUser(user.id)}
+                  className="button muted-button"
+                >
+                  Delete
+                </button>
+              </td>
+            </tr>
+          ))
+        ) : (
+          <tr>
+            <td colSpan={3}>No users</td>
+          </tr>
+        )}
+      </tbody>
+    </table>
+  );
+};
 
-export default UserTable;
+export default TableData;

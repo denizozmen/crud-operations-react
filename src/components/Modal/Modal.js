@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Modal.css";
 import { Fragment } from "react";
 import EditDataForm from "../Form/EditDataForm";
 import AddDataForm from "../Form/AddDataForm";
+import { FormContext } from "../../App";
 
 export const Modal = ({ show, close }) => {
+  const { editing, setEditing, currentUser, updateUser, addUser,setShow } = useContext(
+    FormContext
+  );
   return (
     <div
       className="modal-wrapper"
@@ -30,6 +34,7 @@ export const Modal = ({ show, close }) => {
                   setEditing={setEditing}
                   currentUser={currentUser}
                   updateUser={updateUser}
+                  setShow={setShow}
                 />
               </Fragment>
             ) : (

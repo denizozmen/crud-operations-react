@@ -1,14 +1,20 @@
-import React, { useState} from "react";
+import React, { useState, createContext } from "react";
 import ButtonAddData from "./components/Button/ButtonAddData";
+import TableData from "./components/Table/TableData";
+
+export const FormContext = createContext();
 
 function App() {
+  const [show, setShow] = useState(false);
+
   const initialFormState = { id: null, name: "", username: "" };
 
   // Setting state
-  const [users, setUsers] = useState(usersData);
+  const [users, setUsers] = useState("");
   const [currentUser, setCurrentUser] = useState(initialFormState);
   const [editing, setEditing] = useState(false);
 
+  console.log(users);
   // CRUD operations
   const addUser = (user) => {
     user.id = users.length + 1;
@@ -34,9 +40,25 @@ function App() {
   };
 
   return (
-    <div>
-      <ButtonAddData />
-    </div>
+    <FormContext.Provider
+      value={{
+        editing,
+        setEditing,
+        currentUser,
+        updateUser,
+        addUser,
+        editRow,
+        deleteUser,
+        users,
+        show,
+        setShow
+      }}
+    >
+      <div>
+        <ButtonAddData />
+        <TableData />
+      </div>
+    </FormContext.Provider>
   );
 }
 

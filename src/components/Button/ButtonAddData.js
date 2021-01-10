@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 import { button } from "react";
 import "./ButtonAddData.css";
+import { FormContext } from "../../App";
 
 import { Modal } from "../Modal/Modal";
 
 const ButtonAddData = () => {
-  const [show, setShow] = useState(false);
+  const { show, setShow } = useContext(FormContext);
 
   const closeModalHandler = () => setShow(false);
 
