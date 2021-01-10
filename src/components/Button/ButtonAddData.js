@@ -15,7 +15,7 @@ const ButtonAddData = () => {
         <div onClick={closeModalHandler} className="back-drop"></div>
       ) : null}
       <button onClick={() => setShow(true)} className="btn-openModal">
-        Open Modal
+        Add Data
       </button>
       <Modal show={show} close={closeModalHandler} />
     </div>

@@ -1,5 +1,8 @@
 import React from "react";
 import "./Modal.css";
+import { Fragment } from "react";
+import EditDataForm from "../Form/EditDataForm";
+import AddDataForm from "../Form/AddDataForm";
 
 export const Modal = ({ show, close }) => {
   return (
@@ -11,13 +14,33 @@ export const Modal = ({ show, close }) => {
       }}
     >
       <div className="modal-header">
-        <p>New Transaction</p>
+        <p>New Operation</p>
         <span onClick={close} className="close-modal-btn">
           x
         </span>
       </div>
       <div className="modal-content">
-        <div className="modal-body"></div>
+        <div className="modal-body">
+          <div className="flex-large">
+            {editing ? (
+              <Fragment>
+                <h2>Edit user</h2>
+                <EditDataForm
+                  editing={editing}
+                  setEditing={setEditing}
+                  currentUser={currentUser}
+                  updateUser={updateUser}
+                />
+              </Fragment>
+            ) : (
+              <Fragment>
+                <h2>Add user</h2>
+                <AddDataForm addUser={addUser} />
+              </Fragment>
+            )}
+          </div>
+        </div>
+
         <div className="modal-footer">
           <button onClick={close} className="btn-cancel">
             Close
