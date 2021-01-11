@@ -6,9 +6,14 @@ import AddDataForm from "../Form/AddDataForm";
 import { FormContext } from "../../App";
 
 export const Modal = ({ show, close }) => {
-  const { editing, setEditing, currentUser, updateUser, addUser,setShow } = useContext(
-    FormContext
-  );
+  const {
+    editing,
+    setEditing,
+    currentUser,
+    updateUser,
+    addUser,
+    setShow,
+  } = useContext(FormContext);
   return (
     <div
       className="modal-wrapper"
@@ -29,18 +34,12 @@ export const Modal = ({ show, close }) => {
             {editing ? (
               <Fragment>
                 <h2>Edit user</h2>
-                <EditDataForm
-                  editing={editing}
-                  setEditing={setEditing}
-                  currentUser={currentUser}
-                  updateUser={updateUser}
-                  setShow={setShow}
-                />
+                <EditDataForm />
               </Fragment>
             ) : (
               <Fragment>
                 <h2>Add user</h2>
-                <AddDataForm addUser={addUser} />
+                <AddDataForm />
               </Fragment>
             )}
           </div>

@@ -1,32 +1,45 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from "react";
+import { FormContext } from "../../App";
 
-const AddDataForm = props => {
-	const initialFormState = { id: null, name: '', username: '' }
-	const [ user, setUser ] = useState(initialFormState)
+const AddDataForm = () => {
+  const { addUser } = useContext(FormContext);
 
-	const handleInputChange = event => {
-		const { name, value } = event.target
+  const initialFormState = { id: null, name: "", username: "" };
+  const [user, setUser] = useState(initialFormState);
 
-		setUser({ ...user, [name]: value })
-	}
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
 
-	return (
-		<form
-			onSubmit={event => {
-				event.preventDefault()
-				if (!user.name || !user.username) return
+    setUser({ ...user, [name]: value });
+  };
 
-				props.addUser(user)
-				setUser(initialFormState)
-			}}
-		>
-			<label>Name</label>
-			<input type="text" name="name" value={user.name} onChange={handleInputChange} />
-			<label>Username</label>
-			<input type="text" name="username" value={user.username} onChange={handleInputChange} />
-			<button>Add new user</button>
-		</form>
-	)
-}
+  return (
+    <form
+      onSubmit={(event) => {
+        event.preventDefault();
+        if (!user.name || !user.username) return;
 
-export default AddDataForm
+        addUser(user);
+        setUser(initialFormState);
+      }}
+    >
+      <label>Name</label>
+      <input
+        type="text"
+        name="name"
+        value={user.name}
+        onChange={handleInputChange}
+      />
+      <label>Username</label>
+      <input
+        type="text"
+        name="username"
+        value={user.username}
+        onChange={handleInputChange}
+      />
+      <button>Add new user</button>
+    </form>
+  );
+};
+
+export default AddDataForm;

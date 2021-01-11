@@ -14,7 +14,7 @@ function App() {
   const [currentUser, setCurrentUser] = useState(initialFormState);
   const [editing, setEditing] = useState(false);
 
-  console.log(users);
+  
   // CRUD operations
   const addUser = (user) => {
     user.id = users.length + 1;
@@ -51,7 +51,9 @@ function App() {
         deleteUser,
         users,
         show,
-        setShow
+        setShow,
+        setCurrentUser
+       
       }}
     >
       <div>

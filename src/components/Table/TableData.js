@@ -4,7 +4,7 @@ import { FormContext } from "../../App";
 const TableData = () => {
   const { editRow, users, deleteUser, setShow } = useContext(FormContext);
 
-  //   console.log(users);
+  
 
   return (
     <table>

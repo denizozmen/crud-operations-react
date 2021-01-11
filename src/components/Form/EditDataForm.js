@@ -1,13 +1,14 @@
 import React, { useState, useEffect, useContext } from "react";
 import { FormContext } from "../../App";
 
-const EditUserForm = (props) => {
-  
-  const [user, setUser] = useState(props.currentUser);
+const EditUserForm = () => {
+  const { setEditing, currentUser, updateUser } = useContext(FormContext);
+
+  const [user, setUser] = useState(currentUser);
 
   useEffect(() => {
-    setUser(props.currentUser);
-  }, [props]);
+    setUser(currentUser);
+  }, [currentUser]);
   // You can tell React to skip applying an effect if certain values haven’t changed between re-renders. [ props ]
 
   const handleInputChange = (event) => {
@@ -20,8 +21,7 @@ const EditUserForm = (props) => {
     <form
       onSubmit={(event) => {
         event.preventDefault();
-        props.updateUser(user.id, user);
-        
+        updateUser(user.id, user);
       }}
     >
       <label>Name</label>
@@ -39,10 +39,7 @@ const EditUserForm = (props) => {
         onChange={handleInputChange}
       />
       <button>Update user</button>
-      <button
-        onClick={() => props.setEditing(false)}
-        className="button muted-button"
-      >
+      <button onClick={() => setEditing(false)} className="button muted-button">
         Cancel
       </button>
     </form>
