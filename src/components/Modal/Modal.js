@@ -6,14 +6,7 @@ import AddDataForm from "../Form/AddDataForm";
 import { FormContext } from "../../App";
 
 export const Modal = ({ show, close }) => {
-  const {
-    editing,
-    setEditing,
-    currentUser,
-    updateUser,
-    addUser,
-    setShow,
-  } = useContext(FormContext);
+  const { editing } = useContext(FormContext);
   return (
     <div
       className="modal-wrapper"

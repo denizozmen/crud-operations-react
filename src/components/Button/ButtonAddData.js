@@ -8,7 +8,12 @@ import { Modal } from "../Modal/Modal";
 const ButtonAddData = () => {
   const { show, setShow, setCurrentUser, setEditing } = useContext(FormContext);
 
-  const initialFormState = { id: null, name: "", username: "" };
+  const initialFormState = { id: null,
+    name: "",
+    description: "",
+    operationDate: "",
+    amount: "" ,
+    currency:""};
 
   const closeModalHandler = () => setShow(false);
 

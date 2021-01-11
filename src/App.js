@@ -5,16 +5,49 @@ import TableData from "./components/Table/TableData";
 export const FormContext = createContext();
 
 function App() {
+  const usersData = [
+    {
+      id: 1,
+      name: "Robert",
+      description: "floppydiskette",
+      operationDate: "04.02.2020",
+      amount: "300",
+      currency: "TRY",
+    },
+    {
+      id: 2,
+      name: "Craig",
+      description: "floppydiskette",
+      operationDate: "04.02.2020",
+      amount: "500",
+      currency: "USD",
+    },
+    {
+      id: 3,
+      name: "Ben",
+      description: "floppydiskette",
+      operationDate: "04.02.2020",
+      amount: "400",
+      currency: "EUR",
+    },
+  ];
+
   const [show, setShow] = useState(false);
 
-  const initialFormState = { id: null, name: "", username: "" };
+  const initialFormState = {
+    id: null,
+    name: "",
+    description: "",
+    operationDate: "",
+    amount: "",
+    currency: "",
+  };
 
   // Setting state
-  const [users, setUsers] = useState("");
+  const [users, setUsers] = useState(usersData);
   const [currentUser, setCurrentUser] = useState(initialFormState);
   const [editing, setEditing] = useState(false);
 
-  
   // CRUD operations
   const addUser = (user) => {
     user.id = users.length + 1;
@@ -36,7 +69,14 @@ function App() {
   const editRow = (user) => {
     setEditing(true);
 
-    setCurrentUser({ id: user.id, name: user.name, username: user.username });
+    setCurrentUser({
+      id: user.id,
+      name: user.name,
+      description: user.description,
+      operationDate: user.operationDate,
+      amount: user.amount,
+      currency: user.currency,
+    });
   };
 
   return (
@@ -52,8 +92,7 @@ function App() {
         users,
         show,
         setShow,
-        setCurrentUser
-       
+        setCurrentUser,
       }}
     >
       <div>

@@ -1,10 +1,18 @@
 import React, { useState, useContext } from "react";
 import { FormContext } from "../../App";
+import { format } from "date-fns";
 
 const AddDataForm = () => {
   const { addUser } = useContext(FormContext);
 
-  const initialFormState = { id: null, name: "", username: "" };
+  const initialFormState = {
+    id: null,
+    name: "",
+    description: "",
+    operationDate: format(new Date(), "MM.dd.yyyy"),
+    amount: "",
+    currency: "",
+  };
   const [user, setUser] = useState(initialFormState);
 
   const handleInputChange = (event) => {
@@ -17,10 +25,12 @@ const AddDataForm = () => {
     <form
       onSubmit={(event) => {
         event.preventDefault();
-        if (!user.name || !user.username) return;
+        if (!user.name || !user.description || !user.amount || !user.currency)
+          return;
 
         addUser(user);
         setUser(initialFormState);
+        console.log(user);
       }}
     >
       <label>Name</label>
@@ -30,13 +40,35 @@ const AddDataForm = () => {
         value={user.name}
         onChange={handleInputChange}
       />
-      <label>Username</label>
+
+      <label>Description</label>
       <input
         type="text"
-        name="username"
-        value={user.username}
+        name="description"
+        value={user.description}
         onChange={handleInputChange}
       />
+
+      <label>Amount</label>
+      <input
+        type="number"
+        name="amount"
+        value={user.amount}
+        onChange={handleInputChange}
+      ></input>
+
+      <label>Currency</label>
+      <select
+        type="text"
+        name="currency"
+        value={user.currency}
+        onChange={handleInputChange}
+      >
+        <option value="TRY">TRY</option>
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+      </select>
+
       <button>Add new user</button>
     </form>
   );

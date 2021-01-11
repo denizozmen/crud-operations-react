@@ -4,6 +4,8 @@ import { FormContext } from "../../App";
 const EditUserForm = () => {
   const { setEditing, currentUser, updateUser } = useContext(FormContext);
 
+  console.log(currentUser);
+
   const [user, setUser] = useState(currentUser);
 
   useEffect(() => {
@@ -31,13 +33,34 @@ const EditUserForm = () => {
         value={user.name}
         onChange={handleInputChange}
       />
-      <label>Username</label>
+      <label>Description</label>
       <input
         type="text"
-        name="username"
-        value={user.username}
+        name="description"
+        value={user.description}
         onChange={handleInputChange}
       />
+
+      <label>Amount</label>
+      <input
+        type="number"
+        name="amount"
+        value={user.amount}
+        onChange={handleInputChange}
+      ></input>
+
+      <label>Currency</label>
+      <select
+        type="text"
+        name="currency"
+        value={user.currency}
+        onChange={handleInputChange}
+      >
+        <option value="TRY">TRY</option>
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+      </select>
+
       <button>Update user</button>
       <button onClick={() => setEditing(false)} className="button muted-button">
         Cancel
