@@ -11,8 +11,8 @@
   margin-right: 10%;
 }
 
-/* @media only screen and (max-width: 700px) {
+@media only screen and (max-width: 750px) {
   .btn-openModal {
-    margin: 0px;
+    margin-right: -10%;
   }
-} */
+}

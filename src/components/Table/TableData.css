@@ -1,5 +1,6 @@
 #DataTable {
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
   border-collapse: collapse;
   width: 80%;
   max-width: 1500px;
@@ -37,6 +38,14 @@
   width: 40%;
 }
 
+#DataTable td:nth-child(1) {
+  text-align: center;
+}
+
+#DataTable td:nth-child(n + 4) {
+  text-align: center;
+}
+
 #ButonDelete {
   margin-left: 10px;
   background: transparent url(../../img/redDelete.png) no-repeat left top;
@@ -61,4 +70,13 @@
 
 #ButonEdit:focus {
   outline: 0;
+}
+
+@media only screen and (max-width: 1000px) {
+  #ButonEdit {
+    width: 25px;
+  }
+  #ButonDelete {
+    width: 25px;
+  }
 }
