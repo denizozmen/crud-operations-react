@@ -2,10 +2,17 @@
   background: #4f5cd1;
   color: #eee;
   font-size: 1rem;
-  margin: 2rem;
+  margin-top: 3rem;
   padding: 0.5rem 1.8rem;
   border: none;
   outline: none;
   cursor: pointer;
   float: right;
+  margin-right: 10%;
 }
+
+/* @media only screen and (max-width: 700px) {
+  .btn-openModal {
+    margin: 0px;
+  }
+} */

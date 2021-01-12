@@ -37,12 +37,11 @@ const TableData = () => {
                     editRow(user);
                     setShow(true);
                   }}
-                >
-                  Edit
-                </button>
-                <button id="ButonDelete" onClick={() => deleteUser(user.id)}>
-                  
-                </button>
+                ></button>
+                <button
+                  id="ButonDelete"
+                  onClick={() => deleteUser(user.id)}
+                ></button>
               </td>
             </tr>
           ))

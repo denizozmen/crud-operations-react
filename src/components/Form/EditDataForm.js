@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { FormContext } from "../../App";
+import "./Forms.css";
 
 const EditUserForm = () => {
   const { setEditing, currentUser, updateUser } = useContext(FormContext);
@@ -61,10 +62,7 @@ const EditUserForm = () => {
         <option value="EUR">EUR</option>
       </select>
 
-      <button>Update user</button>
-      <button onClick={() => setEditing(false)} className="button muted-button">
-        Cancel
-      </button>
+      <button id="ButtonUpdate">Update Data</button>
     </form>
   );
 };

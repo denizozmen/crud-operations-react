@@ -1,0 +1,43 @@
+input[type="text"],
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="number"],
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#ButtonAddData {
+  font-size: 1rem;
+  margin-left: auto;
+  padding: 0.5rem 1.8rem;
+  background: #dd501d;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+#ButtonUpdate {
+  font-size: 1rem;
+  margin-left: auto;
+  padding: 0.5rem 1.8rem;
+  background: #dd501d;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}

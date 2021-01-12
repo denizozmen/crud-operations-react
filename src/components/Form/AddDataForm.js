@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import { FormContext } from "../../App";
 import { format } from "date-fns";
+import "./Forms.css";
 
 const AddDataForm = () => {
   const { addUser } = useContext(FormContext);
@@ -69,7 +70,7 @@ const AddDataForm = () => {
         <option value="EUR">EUR</option>
       </select>
 
-      <button>Add new user</button>
+      <button id="ButtonAddData">Add Data</button>
     </form>
   );
 };

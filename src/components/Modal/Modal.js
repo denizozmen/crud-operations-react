@@ -16,7 +16,7 @@ export const Modal = ({ show, close }) => {
       }}
     >
       <div className="modal-header">
-        <p>New Operation</p>
+        <p>Operations</p>
         <span onClick={close} className="close-modal-btn">
           x
         </span>
@@ -26,12 +26,12 @@ export const Modal = ({ show, close }) => {
           <div className="flex-large">
             {editing ? (
               <Fragment>
-                <h2>Edit user</h2>
+                <h2>Edit Data</h2>
                 <EditDataForm />
               </Fragment>
             ) : (
               <Fragment>
-                <h2>Add user</h2>
+                <h2>Add Data</h2>
                 <AddDataForm />
               </Fragment>
             )}

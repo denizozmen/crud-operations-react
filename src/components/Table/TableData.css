@@ -1,9 +1,10 @@
 #DataTable {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
-  width: 70%;
-  max-width: 1200px;
+  width: 80%;
+  max-width: 1500px;
   margin: auto;
+  margin-top: -420px;
 }
 
 #DataTable td,
@@ -23,19 +24,41 @@
 #DataTable th {
   padding-top: 12px;
   padding-bottom: 12px;
-  text-align: left;
+  text-align: center;
   background-color: #4f5cd1;
   color: white;
 }
 
+#DataTable th:nth-child(2) {
+  width: 20%;
+}
+
+#DataTable th:nth-child(3) {
+  width: 40%;
+}
+
 #ButonDelete {
   margin-left: 10px;
-  background: transparent url(../../img/logoDelete.png) no-repeat left top;
+  background: transparent url(../../img/redDelete.png) no-repeat left top;
   width: 34px;
   height: 38px;
   border: none;
+  cursor: pointer;
+}
+
+#ButonDelete:active {
+  outline: none;
 }
 
 #ButonEdit {
   margin-left: 20px;
+  background: transparent url(../../img/blueEdit.png) no-repeat left top;
+  width: 34px;
+  height: 33px;
+  border: none;
+  cursor: pointer;
+}
+
+#ButonEdit:focus {
+  outline: 0;
 }
