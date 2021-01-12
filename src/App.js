@@ -1,6 +1,8 @@
 import React, { useState, createContext } from "react";
 import ButtonAddData from "./components/Button/ButtonAddData";
 import TableData from "./components/Table/TableData";
+import "./App.css";
+import Header from "./components/Header/Header";
 
 export const FormContext = createContext();
 
@@ -96,6 +98,7 @@ function App() {
       }}
     >
       <div>
+        <Header />
         <ButtonAddData />
         <TableData />
       </div>
