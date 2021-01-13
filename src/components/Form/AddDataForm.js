@@ -4,7 +4,7 @@ import { format } from "date-fns";
 import "./Forms.css";
 
 const AddDataForm = () => {
-  const { addUser } = useContext(FormContext);
+  const { addUser, setShow } = useContext(FormContext);
 
   const initialFormState = {
     id: null,
@@ -31,7 +31,7 @@ const AddDataForm = () => {
 
         addUser(user);
         setUser(initialFormState);
-        console.log(user);
+        setShow(false);
       }}
     >
       <label>Name</label>

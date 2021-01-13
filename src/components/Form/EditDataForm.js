@@ -3,7 +3,7 @@ import { FormContext } from "../../App";
 import "./Forms.css";
 
 const EditUserForm = () => {
-  const { setEditing, currentUser, updateUser } = useContext(FormContext);
+  const { currentUser, updateUser, setShow } = useContext(FormContext);
 
   console.log(currentUser);
 
@@ -25,6 +25,7 @@ const EditUserForm = () => {
       onSubmit={(event) => {
         event.preventDefault();
         updateUser(user.id, user);
+        setShow(false);
       }}
     >
       <label>Name</label>
