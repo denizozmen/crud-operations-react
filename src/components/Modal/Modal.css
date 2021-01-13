@@ -78,12 +78,27 @@ h2 {
   margin-bottom: 10px;
 }
 
-@media only screen and (max-width: 450px) {
+@media (min-width: 401px) and (max-width: 450px) {
   .modal-wrapper {
     background: #fff;
     width: 80%;
     max-width: 800px;
     margin: auto;
+    margin-right: -13px;
+    transition: all 0.5s ease;
+  }
+
+  .modal-content {
+    padding: 1.5rem;
+  }
+}
+@media only screen and  (max-width: 400px) {
+  .modal-wrapper {
+    background: #fff;
+    width: 80%;
+    max-width: 800px;
+    margin: auto;
+    margin-right: -35px;
     transition: all 0.5s ease;
   }
 
