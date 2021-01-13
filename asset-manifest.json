@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/crud-operations-react/static/css/main.a8cb4744.chunk.css",
+    "main.css": "/crud-operations-react/static/css/main.a6aed16a.chunk.css",
     "main.js": "/crud-operations-react/static/js/main.4abda0b5.chunk.js",
     "main.js.map": "/crud-operations-react/static/js/main.4abda0b5.chunk.js.map",
     "runtime-main.js": "/crud-operations-react/static/js/runtime-main.3bb06b89.js",
@@ -10,14 +10,14 @@
     "static/js/3.125b61c6.chunk.js": "/crud-operations-react/static/js/3.125b61c6.chunk.js",
     "static/js/3.125b61c6.chunk.js.map": "/crud-operations-react/static/js/3.125b61c6.chunk.js.map",
     "index.html": "/crud-operations-react/index.html",
-    "static/css/main.a8cb4744.chunk.css.map": "/crud-operations-react/static/css/main.a8cb4744.chunk.css.map",
+    "static/css/main.a6aed16a.chunk.css.map": "/crud-operations-react/static/css/main.a6aed16a.chunk.css.map",
     "static/js/2.52d447f4.chunk.js.LICENSE.txt": "/crud-operations-react/static/js/2.52d447f4.chunk.js.LICENSE.txt",
     "static/media/logo.6ce24c58.svg": "/crud-operations-react/static/media/logo.6ce24c58.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.3bb06b89.js",
     "static/js/2.52d447f4.chunk.js",
-    "static/css/main.a8cb4744.chunk.css",
+    "static/css/main.a6aed16a.chunk.css",
     "static/js/main.4abda0b5.chunk.js"
   ]
 }
