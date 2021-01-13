@@ -8,6 +8,10 @@
   margin-top: -420px;
 }
 
+#DataTable tbody {
+  overflow: auto;
+}
+
 #DataTable td,
 #DataTable th {
   border: 1px solid #ddd;

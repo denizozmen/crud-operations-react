@@ -12,7 +12,7 @@ const AddDataForm = () => {
     description: "",
     operationDate: format(new Date(), "MM.dd.yyyy"),
     amount: "",
-    currency: "",
+    currency: "TRY",
   };
   const [user, setUser] = useState(initialFormState);
 
@@ -65,7 +65,9 @@ const AddDataForm = () => {
         value={user.currency}
         onChange={handleInputChange}
       >
-        <option value="TRY">TRY</option>
+        <option selected value="TRY">
+          TRY
+        </option>
         <option value="USD">USD</option>
         <option value="EUR">EUR</option>
       </select>
