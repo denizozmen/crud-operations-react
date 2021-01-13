@@ -1,8 +1,8 @@
 import React, { useState, createContext } from "react";
 import ButtonAddData from "./components/Button/ButtonAddData";
 import TableData from "./components/Table/TableData";
-import "./App.css";
 import Header from "./components/Header/Header";
+import "./App.css";
 
 export const FormContext = createContext();
 
@@ -10,31 +10,29 @@ function App() {
   const usersData = [
     {
       id: 1,
-      name: "Robert",
-      description: "floppydiskette",
-      operationDate: "04.02.2020",
-      amount: "300",
+      name: "Keyboard",
+      description: "Redragon Gaming",
+      operationDate: "01.12.2020",
+      amount: "40",
       currency: "TRY",
     },
     {
       id: 2,
-      name: "Craig",
-      description: "floppydiskette",
-      operationDate: "04.02.2020",
-      amount: "500",
+      name: "Mouse",
+      description: "Jelly Comb 2.4G Slim Wireless ",
+      operationDate: "04.12.2020",
+      amount: "10",
       currency: "USD",
     },
     {
       id: 3,
-      name: "Ben",
-      description: "floppydiskette",
-      operationDate: "04.02.2020",
-      amount: "400",
+      name: "USB",
+      description: "SanDisk 128GB Cruzer USB 2.0 Flash Drive",
+      operationDate: "06.12.2020",
+      amount: "50",
       currency: "EUR",
     },
   ];
-
-  const [show, setShow] = useState(false);
 
   const initialFormState = {
     id: null,
@@ -46,6 +44,7 @@ function App() {
   };
 
   // Setting state
+  const [show, setShow] = useState(false);
   const [users, setUsers] = useState(usersData);
   const [currentUser, setCurrentUser] = useState(initialFormState);
   const [editing, setEditing] = useState(false);

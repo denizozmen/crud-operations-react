@@ -10,7 +10,7 @@ const AddDataForm = () => {
     id: null,
     name: "",
     description: "",
-    operationDate: format(new Date(), "MM.dd.yyyy"),
+    operationDate: format(new Date(), "dd.MM.yyyy"),
     amount: "",
     currency: "TRY",
   };
