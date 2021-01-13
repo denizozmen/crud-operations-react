@@ -74,9 +74,13 @@
 
 @media only screen and (max-width: 1000px) {
   #ButonEdit {
-    width: 25px;
+    width: 24px;
   }
   #ButonDelete {
-    width: 25px;
+    width: 23px;
+  }
+
+  #DataTable td:nth-child(6) {
+    padding: 0px;
   }
 }
