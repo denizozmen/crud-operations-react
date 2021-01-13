@@ -88,11 +88,15 @@ h2 {
     transition: all 0.5s ease;
   }
 
+  .back-drop {
+    margin-top: -39px;
+  }
+
   .modal-content {
     padding: 1.5rem;
   }
 }
-@media only screen and  (max-width: 400px) {
+@media only screen and (max-width: 400px) {
   .modal-wrapper {
     background: #fff;
     width: 80%;
@@ -104,5 +108,9 @@ h2 {
 
   .modal-content {
     padding: 1.5rem;
+  }
+
+  .back-drop {
+    margin-top: -39px;
   }
 }

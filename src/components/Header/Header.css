@@ -28,7 +28,7 @@
   align-items: left;
 }
 
-@media only screen and (max-width: 770px) {
+@media only screen and (max-width: 768px) {
   .head {
     margin-top: 3%;
   }

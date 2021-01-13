@@ -17,8 +17,8 @@
   }
 }
 
-@media (min-width: 401px) and (max-width: 767px) {
+@media (min-width: 401px) and (max-width: 450px) {
   .btn-openModal {
-    margin-right: -26%;
+    margin-right: -27%;
   }
 }
