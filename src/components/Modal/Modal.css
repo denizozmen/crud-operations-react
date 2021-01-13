@@ -71,7 +71,8 @@ body {
   position: fixed;
   transition: all 1.3s;
   width: 100%;
-  margin-top: -100px;
+  top: 0;
+  left: 0;
 }
 
 h2 {
@@ -86,10 +87,6 @@ h2 {
     margin: auto;
     margin-right: -13px;
     transition: all 0.5s ease;
-  }
-
-  .back-drop {
-    margin-top: -39px;
   }
 
   .modal-content {
@@ -108,9 +105,5 @@ h2 {
 
   .modal-content {
     padding: 1.5rem;
-  }
-
-  .back-drop {
-    margin-top: -39px;
   }
 }
